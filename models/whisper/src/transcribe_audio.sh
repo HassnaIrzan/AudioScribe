@@ -1,0 +1,1 @@
+whisper /nfs/home/hirzan/projects/audio_learning/data/Pituitary/Audio/test.wav --model large --language en
