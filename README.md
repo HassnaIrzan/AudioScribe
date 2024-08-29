@@ -1,35 +1,58 @@
 # Whisper AudioScribe
 
-This repository contains two ways to use OpenAI's Whisper model to transcribe audio files into text: Python-based and Bash-based. The repository also includes a Docker setup to build and run the application in a containerized environment, along with a Bash script to streamline the Docker image creation process.
-Furthermore, a Bash script is provided to run the model on a DGX cluster using Runai.
+Welcome to the Whisper AudioScribe repository! This project offers two approaches to transcribing audio files into text using OpenAI's Whisper model: one based on Python and the other on Bash. Additionally, it includes a Docker setup for running the application in a containerized environment and a Bash script for easy Docker image creation. For those utilizing a DGX cluster, a Bash script is also provided to run the model using Runai.
 
 ## Features
 
-- **Audio Transcription:** Converts audio files into text using the Whisper model.
-- **Dockerized Environment:** Run the application in an isolated and consistent environment with Docker.
-- **Automated Setup:** Use the provided Bash script to easily create the Docker image and start the service.
+- **Audio Transcription:** Convert audio files into text using OpenAI's Whisper model.
+- **Dockerized Environment:** Leverage Docker to run the application in an isolated and consistent environment.
+- **Automated Setup:** Simplify the Docker image creation and service startup with the provided Bash script.
+- **Cluster Execution:** Run the Whisper model on a DGX cluster using the integrated Runai script.
 
-## Getting Started (Run Whisper with bash command)
-- **Dockerized Environment:**  Build the docker image using the [creat_docker_im.sh](models/whisper/create_docker_im.sh)
-- **Run Whisper model:** Run the transcription by using [job.sh](models/whisper/job.sh)
-- 
-## Getting Started (Run Whisper with Python3)
-- **Install requirements:**  Install all the recommended libraries as specified by the [requirements](models/whisper/requirements.txt) and the [Dockerfile](models/whisper/Dockerfile)
-- **Run Whisper model:** Run the model by running [transcribe_audio.py](models/whisper/src/transcribe_audio.py)
+## Getting Started
 
-Before you begin, ensure you have the following installed on your system:
+### Running Whisper with Bash Commands
 
-- Docker: [Install Docker](https://docs.docker.com/get-docker/)
-- Bash: Available by default on most Unix-based systems, including Linux and macOS. Windows users may use Git Bash or WSL.
-  
+1. **Build the Docker Image:**
+   - Use the provided script to build the Docker image:
+     ```bash
+     bash models/whisper/create_docker_im.sh
+     ```
 
-### Cloning the Repository
+2. **Run the Whisper Model:**
+   - Start the transcription process using:
+     ```bash
+     bash models/whisper/job.sh
+     ```
 
-Clone the repository to your local machine:
+### Running Whisper with Python3
+
+1. **Install Requirements:**
+   - Install all necessary libraries as specified in the [requirements.txt](models/whisper/requirements.txt) and the [Dockerfile](models/whisper/Dockerfile):
+     ```bash
+     pip install -r models/whisper/requirements.txt
+     ```
+
+2. **Run the Whisper Model:**
+   - Execute the Python script to start transcribing:
+     ```bash
+     python3 models/whisper/src/transcribe_audio.py
+     ```
+
+## Prerequisites
+
+Before you start, ensure you have the following installed on your system:
+
+- **Docker:** [Install Docker](https://docs.docker.com/get-docker/)
+- **Bash:** Typically available by default on most Unix-based systems, including Linux and macOS. Windows users can use Git Bash or WSL.
+
+## Cloning the Repository
+
+To get started, clone the repository to your local machine:
 
 ```bash
 git clone git@github.com:HassnaIrzan/AudioScribe.git
-cd whisper-transcription
+cd AudioScribe
 ```
 ## Contact
 For any queries, please reach out to Hassna Irzan at rmaphir@gmail.com
